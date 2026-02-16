@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devraj — Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Dark theme config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "#0a0a0a",
+              card: "#111111",
+              accent: "#22c55e",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#030712] text-gray-300 font-sans">
+    <!-- Main Container -->
+    <main class="min-h-screen flex items-center justify-center px-6">
+      <div class="max-w-2xl w-full text-center space-y-10">
+        <!-- Hero -->
+        <div data-include="components/hero.html"></div>
+
+        <div class="w-full h-px bg-gray-800"></div>
+
+        <!-- experience -->
+        <div data-include="components/experience.html"></div>
+
+        <div class="w-full h-px bg-gray-800"></div>
+
+        <!-- skills -->
+        <div data-include="components/skills.html"></div>
+
+        <div class="w-full h-px bg-gray-800"></div>
+
+        <!-- Projects -->
+        <div data-include="components/projects.html" id="projects"></div>
+
+        <div class="w-full h-px bg-gray-800"></div>
+
+        <!-- Contact -->
+        <div data-include="components/contact.html" id="contact"></div>
+
+        <!-- Footer -->
+        <div data-include="components/footer.html"></div>
+      </div>
+    </main>
+
+    <script src="js/include.js"></script>
+  </body>
+</html>
